@@ -1,0 +1,20 @@
+
+<div class="d-flex justify-content-center">
+
+  <img
+    [src]="url"
+    class="card-img-top animate__animated animate__fadeIn"
+    [alt]="alt"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+  >
+
+  <img
+    *ngIf="!hasLoaded"
+    src="assets/rings.svg"
+    class="mt-2"
+    height="35"
+    width="35"
+  >
+
+</div>
